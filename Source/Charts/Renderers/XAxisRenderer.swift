@@ -146,8 +146,7 @@ open class XAxisRenderer: NSObject, AxisRenderer
         if axis.centerAxisLabelsEnabled
         {
             let offset: Double = interval / 2.0
-            axis.centeredEntries = axis.entries[..<n]
-                .map { $0 + offset }
+            axis.centeredEntries = axis.entries.map { $0 + offset }
         }
         
         computeSize()
